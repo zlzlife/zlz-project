@@ -4,3 +4,4 @@ demo/
 node_modules/
 package-lock.json
 book/
+.npmrc
