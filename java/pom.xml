@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- project 根元素 -->
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- 定义POM模型的版本 -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 定义项目所属的组织或组织的唯一标识符 -->
+  <groupId>com.example</groupId>
+
+  <!-- 定义项目的唯一标识符 -->
+  <artifactId>projectName</artifactId>
+
+  <!-- 定义项目的打包类型 jar,war -->
+  <packaging>jar</packaging>
+
+  <!-- 包含项目的依赖项 -->
+  <dependencies>
+    <!-- 依赖项 -->
+  </dependencies>
+
+  <!-- 包含有关项目构建的配置信息 -->
+  <build>
+    <!-- 构建项 -->
+
+    <!-- 配置Maven构建过程中使用的插件 -->
+    <plugins>
+      <!-- 插件 -->
+      <plugin>
+        <!-- 插件定义的组织或组织唯一标识 -->
+        <groupId></groupId>
+        <!-- 插件项目定义的唯一标识 -->
+        <artifactId></artifactId>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <!-- 根据不同环境构建不同配置 -->
+  <profiles>
+
+    <!-- dev环境下的build构建 -->
+    <profile>
+      <id>dev</id>
+      <build>
+        <!-- 开发环境下的构建配置 -->
+      </build>
+    </profile>
+
+    <!-- prod环境下的build构建 -->
+    <profile>
+      <id>prod</id>
+      <build>
+        <!-- 生产环境下的构建配置 -->
+      </build>
+    </profile>
+  </profiles>
+
+  <!-- 用于定义和配置项目中使用的属性。 -->
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+  </properties>
+
+</project>
