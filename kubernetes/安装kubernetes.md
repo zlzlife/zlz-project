@@ -72,6 +72,10 @@ kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard # 找到 type: Clu
 kubectl get svc -A | grep "kubernetes-dashboard" # 两条命令都可以
 kubectl get service -n kubernetes-dashboard # 两条命令都可以
 
+# 5. 创建登录用户
+kubectl apply -f admin-login.yaml 
+
+# 6. 获取token
 kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"
 ```
 
